@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.categories {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  
+  .categories h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .category-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .category-item img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-item img:hover {
+    transform: scale(1.1);
+    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.4); */
+  }
+  
+  .category-item p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .category-item img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category-item img {
+      width: 150px;
+      height: 150px;
+    }
+  }

@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF8F8;
+  width: 100%;
+  position: fixed; /* Fixed positioning to keep it at the top */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  color:#575757
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease, width 0.3s ease;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.search-wrapper.active .search-container {
+  opacity: 1;
+  width: auto;
+  height: 32px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 200px;
+  height: 30px;
+}
+
+.search-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #575757;
+}
+
+
+
+.cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Adjust as needed */
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+}

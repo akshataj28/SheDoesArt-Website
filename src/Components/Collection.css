@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.collection {
+  padding: 20px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the collection items horizontally */
+}
+
+.collection-item,
+.collection-item2 {
+  display: flex;
+  padding: 40px;
+  justify-content: space-evenly;
+  gap: 60px;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 1000px;
+  height: 350px;
+  transition: transform 0.3s ease;
+}
+
+.collection-item:nth-child(odd),
+.collection-item:nth-child(even) {
+  flex-direction: column;
+}
+
+.collection-image,
+.collection-image1 {
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.collection-image:hover,
+.collection-image1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.collection-text,
+.collection-text2 {
+  /* width: %; */
+  height: 500px;
+  width: 300px;
+  justify-content: space-evenly;
+}
+
+.collection-text h2,
+.collection-text2 h2 {
+   font-family: "Alex Brush", cursive;
+   font-size: 55px;
+}
+.collection-text p,
+.collection-text2 p {
+  font-family: "Crimson Text", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .collection-item,
+  .collection-item2 {
+    flex-direction: row;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+  .collection-item:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .collection-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .collection-image,
+  .collection-image1 {
+    width: 50%;
+    margin: 0 20px; /* Adjusted side margins for spacing */
+  }
+
+  .collection-text,
+  .collection-text2 {
+    width: 50%;
+    padding: 20px;
+    text-align: left; /* Reset text alignment for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .collection-item,
+  .collection-item2 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .collection-text,
+  .collection-text2 {
+    width: 40%;
+  }
+
+  .collection-image,
+  .collection-image1 {
+    width: 50%;
+    margin: 0 20px; /* Adjusted side margins for spacing */
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.collection-image:hover,
+.collection-image1:hover {
+  animation: glow 1.5s infinite alternate;
+}
+
+@media (max-width: 767px) {
+  .collection-item,
+  .collection-item2 {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .collection-item:nth-child(odd),
+  .collection-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .collection-image,
+  .collection-image1 {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .collection-text,
+  .collection-text2 {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .collection-text h2,
+  .collection-text2 h2 {
+    font-size: 40px;
+  }
+
+  .collection-text p,
+  .collection-text2 p {
+    font-size: 14px;
+  }
+}
