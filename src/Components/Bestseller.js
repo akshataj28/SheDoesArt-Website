@@ -11,6 +11,13 @@ import image2 from '../images/bracelet.jpeg';
 import image3 from '../images/bracelet.jpeg';
 import image4 from '../images/bracelet.jpeg';
 
+const products = [
+  { id: 1, name: 'Product 1', price: '$20', image: image1 },
+  { id: 2, name: 'Product 2', price: '$25', image: image2 },
+  { id: 3, name: 'Product 3', price: '$30', image: image3 },
+  { id: 4, name: 'Product 4', price: '$35', image: image4 },
+];
+
 const Bestseller = () => {
   const settings = {
     dots: true,
@@ -44,18 +51,16 @@ const Bestseller = () => {
     <div className="bestseller-container" id="bestseller">
       <h2>OUR BESTSELLERS</h2>
       <Slider {...settings} className="bestseller-items">
-        <div className="bestseller-item">
-          <img src={image1} alt="Bestseller 1" />
-        </div>
-        <div className="bestseller-item">
-          <img src={image2} alt="Bestseller 2" />
-        </div>
-        <div className="bestseller-item">
-          <img src={image3} alt="Bestseller 3" />
-        </div>
-        <div className="bestseller-item">
-          <img src={image4} alt="Bestseller 4" />
-        </div>
+        {products.map(product => (
+          <div className="bestseller-item" key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <div className="overlay">
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        ))}
       </Slider>
     </div>
   );
