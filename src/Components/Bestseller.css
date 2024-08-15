@@ -9,20 +9,75 @@
 .bestseller-container h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Crimson Text', serif;
 }
 
 .bestseller-items {
   width: 90%;
   margin: 0 auto;
-  
 }
 
 .bestseller-item {
+  position: relative;
   padding: 5px;
-  width: 50%;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 10px; /* Add space between items */
 }
 
 .bestseller-item img {
-  width: 50%;
+  width: 55%;
+  height: auto;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.bestseller-item:hover img {
+  transform: scale(1.1);
+}
+
+.bestseller-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58%;
+  border-radius: 8px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bestseller-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-family: 'Alex Brush', cursive;
+}
+
+.overlay p {
+  margin: 10px 0;
+}
+
+.overlay button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.overlay button:hover {
+  background-color: #218838;
 }
